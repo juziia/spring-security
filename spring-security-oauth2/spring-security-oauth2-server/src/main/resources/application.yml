@@ -1,0 +1,29 @@
+server:
+  port: 9003
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql:///security_authority?serverTimezone=GMT%2B8
+  redis:
+    host: 192.168.25.133
+    port: 6379
+#  main:
+#    allow-bean-definition-overriding: true
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com.juzi.security: debug
+
+auth:
+  rsa:
+    pubKeyFile: D:\auth_key\rsa_key.pub
+    priKeyFile: D:\auth_key\rsa_pri_key
+    keyFile: D:\auth_key\juzi.jks   # 密钥对文件

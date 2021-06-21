@@ -1,0 +1,6 @@
+server:
+  port: 9001
+
+auth:
+  rsa:
+    pubKeyFile: D:\auth_key\rsa_key.pub

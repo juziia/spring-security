@@ -1,0 +1,27 @@
+server:
+  port: 8686
+
+
+
+spring:
+  mvc:
+    view:
+      prefix: /pages/
+      suffix: .jsp
+
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/security_authority?serverTimezone=GMT%2B8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  type-aliases-package: com.juzi.security.domain
+
+logging:
+  level:
+    com.juzi.security.controller: debug
